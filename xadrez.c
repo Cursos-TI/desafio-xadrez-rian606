@@ -1,47 +1,64 @@
 
 #include <stdio.h>
-//nivel novato, aventureiro
+// nivel novato, aventureiro e mestre
+// implementaçao da recursividade para torre, bispo e rainha, e troca de direção do movimento do cavalo
+void moverTorre (int casa){
+    if (casa > 0)
+    {
+        printf("Direita\n");
+        moverTorre(casa - 1);
+    }
+}
+
+void moverBispo (int casa){
+    if (casa > 0)
+    {
+        printf("Cima, ");
+        if (casa > 0)
+        {
+            printf("Esaquerda\n");
+        }
+        
+        moverBispo(casa - 1);
+    }
+    
+}
+
+void moverRainha (int casa){
+    if (casa > 0)
+    {
+        printf("Esquerda\n");
+        moverRainha(casa - 1);
+    }
+}
+
 int main(){
 
     int torre = 0, bispo = 0, rainha = 0, cavalo = 0; //declaração das variaveis
 
     printf("torre\n");// nome da peça
+    moverTorre(5);
 
-    for (torre; torre < 5; torre++)// movimento da peça
-    {
-        printf("Direita\n");//direção do movimento
-    }
-
-    printf("\nbispo\n");//nome da peça
-
-    while (bispo < 5)//enqunto for verdadeira
-    {
-        printf("Cima, Direita\n");//movimento
-        bispo++;//adição para não gerar loop infinito
-    }
+    printf("\nBispo\n");
+    moverBispo(5);
 
     printf("\nrainha\n");//nome peça
-    
-    do
-    {
-        printf("Esquerda\n");//movimento
-        rainha++;//adição para não gerar loop infinito
-
-    } while (rainha < 8);//condição
+    moverRainha(8);
     
     printf("\nCavalo\n");//nome peça
     while (cavalo < 3)//enqunto for verdadeira
     {
         while (cavalo < 2)//enqunto for verdadeira
         {
-            printf("Baixo\n");//movimento
+            printf("Cima\n");//movimento
             cavalo++;//adição para não gerar loop infinito
         }
-        printf("Esquerda\n");//movimento final
+        printf("Direita\n");//movimento final
         cavalo++;//adição para não gerar loop infinito
     }
     
 
 
     return 0;
-    }
+
+}
