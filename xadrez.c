@@ -1,9 +1,9 @@
 
 #include <stdio.h>
-//desafio novato
+//nivel novato, aventureiro
 int main(){
 
-    int torre = 0, bispo = 0, rainha = 0; //declaração das variaveis
+    int torre = 0, bispo = 0, rainha = 0, cavalo = 0; //declaração das variaveis
 
     printf("torre\n");// nome da peça
 
@@ -29,6 +29,19 @@ int main(){
 
     } while (rainha < 8);//condição
     
-    return 0;
+    printf("\nCavalo\n");//nome peça
+    while (cavalo < 3)//enqunto for verdadeira
+    {
+        while (cavalo < 2)//enqunto for verdadeira
+        {
+            printf("Baixo\n");//movimento
+            cavalo++;//adição para não gerar loop infinito
+        }
+        printf("Esquerda\n");//movimento final
+        cavalo++;//adição para não gerar loop infinito
+    }
+    
 
-}
+
+    return 0;
+    }
