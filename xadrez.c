@@ -1,32 +1,34 @@
+
 #include <stdio.h>
+//desafio novato
+int main(){
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+    int torre = 0, bispo = 0, rainha = 0; //declaração das variaveis
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    printf("torre\n");// nome da peça
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    for (torre; torre < 5; torre++)// movimento da peça
+    {
+        printf("Direita\n");//direção do movimento
+    }
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    printf("\nbispo\n");//nome da peça
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    while (bispo < 5)//enqunto for verdadeira
+    {
+        printf("Cima, Direita\n");//movimento
+        bispo++;//adição para não gerar loop infinito
+    }
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    printf("\nrainha\n");//nome peça
+    
+    do
+    {
+        printf("Esquerda\n");//movimento
+        rainha++;//adição para não gerar loop infinito
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
-
+    } while (rainha < 8);//condição
+    
     return 0;
+
 }
